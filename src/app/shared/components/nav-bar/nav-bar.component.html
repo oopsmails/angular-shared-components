@@ -12,7 +12,16 @@
     <ul>
       <li *ngFor="let item of navBarConfig$ | async; let i = index">
         <!-- <li *ngFor="let item of navBarConfig; let i = index"> -->
-        <a routerLink="{{ item.parentLink }}">{{ item.linkText }}</a>
+        <a *ngIf="!item.submenu.length" routerLink="{{ item.parentLink }}">{{ item.linkText }}</a>
+        <a *ngIf="item.submenu.length">
+          {{ item.linkText | uppercase }}
+          <span class="nav-bar-arrow-down"><i class="arrow down"></i></span>
+        </a>
+        <ul>
+          <li *ngFor="let subItem of item.submenu">
+            <a routerLink="{{ subItem.link }}">{{ subItem.childtext }}</a>
+          </li>
+        </ul>
       </li>
       <!-- <li>
         <a routerLink="/home"
