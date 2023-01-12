@@ -12,9 +12,47 @@
     "submenu": []
   },
   {
+    "linkText": "Goto2",
+    "parentLink": "",
+    "menu": false,
+    "submenu": [
+      {
+        "childtext": "Search hello",
+        "link": "/hello"
+      },
+      {
+        "childtext": "Search 2",
+        "link": "/hello"
+      },
+      {
+        "childtext": "Go nowhere",
+        "link": "/nowhere"
+      }
+    ]
+  },
+  {
     "linkText": "NotFound",
     "parentLink": "/notfound",
     "menu": false,
     "submenu": []
+  },
+  {
+    "linkText": "Goto",
+    "parentLink": "",
+    "menu": false,
+    "submenu": [
+      {
+        "childtext": "Nowhere to go",
+        "link": "/nowhere"
+      },
+      {
+        "childtext": "Hello Component",
+        "link": "/hello"
+      },
+      {
+        "childtext": "Go Hello",
+        "link": "/hello"
+      }
+    ]
   }
 ]
