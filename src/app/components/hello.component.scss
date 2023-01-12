@@ -1,0 +1,26 @@
+table,
+th,
+td {
+    text-align: left;
+    width: 100%;
+    border: 1px solid blue;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    width: 100px;
+    overflow: hidden;
+}
+
+tr:hover {
+    background-color: coral;
+}
+
+::ng-deep .highlighted-text {
+    background-color: yellow;
+}
+
+.searcTexthDiv {
+    padding: 0px 0 10px 0;
+}

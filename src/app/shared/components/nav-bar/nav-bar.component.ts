@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { fromEvent, Observable, Subject, takeUntil } from 'rxjs';
+import { fromEvent, Observable, Subject, takeUntil, tap } from 'rxjs';
 import { NavBarModel } from '../../models/shared.model';
 import { SharedDataService } from '../../services/shared.data.service';
 
@@ -20,6 +20,10 @@ export class NavBarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.navBarConfig$ = this.sharedDataService.getNavBarConfig();
+    // this.sharedDataService
+    //   .getNavBarConfig()
+    //   .pipe(tap((res) => console.log(res)))
+    //   .subscribe((res) => (this.navBarConfig = res));
   }
 
   ngAfterViewInit(): void {
@@ -31,10 +35,6 @@ export class NavBarComponent implements OnInit, AfterViewInit, OnDestroy {
         this.menubarElementRef.nativeElement?.click();
       });
   }
-
-  // ddToggle(i: number) {
-  //   this.result[i].menu = !this.result[i].menu;
-  // }
 
   ngOnDestroy() {
     this.onDestroy$.next(true);

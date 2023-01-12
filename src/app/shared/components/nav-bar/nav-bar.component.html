@@ -11,6 +11,7 @@
   <nav class="navbar" #navbar>
     <ul>
       <li *ngFor="let item of navBarConfig$ | async; let i = index">
+        <!-- <li *ngFor="let item of navBarConfig; let i = index"> -->
         <a routerLink="{{ item.parentLink }}">{{ item.linkText }}</a>
       </li>
       <!-- <li>
