@@ -1,0 +1,20 @@
+[
+  {
+    "linkText": "Home",
+    "parentLink": "",
+    "menu": false,
+    "submenu": []
+  },
+  {
+    "linkText": "Hello",
+    "parentLink": "/hello",
+    "menu": false,
+    "submenu": []
+  },
+  {
+    "linkText": "NotFound",
+    "parentLink": "/notfound",
+    "menu": false,
+    "submenu": []
+  }
+]

@@ -15,6 +15,7 @@ import {
   tap,
 } from 'rxjs';
 import { RandomItem, RsSearchResult } from 'src/app/shared/models/sample.model';
+import { NavBarModel } from '../models';
 
 @Injectable({
   providedIn: 'root',
@@ -98,6 +99,10 @@ export class SharedDataService implements OnDestroy {
       });
     }
     return items;
+  }
+
+  getNavBarConfig(): Observable<NavBarModel[]> {
+    return this.httpClient.get('assets/config/nav-bar-config.json') as Observable<NavBarModel[]>;
   }
 
   ngOnDestroy(): void {

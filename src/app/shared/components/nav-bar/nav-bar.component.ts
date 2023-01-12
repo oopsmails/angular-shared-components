@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { fromEvent, Subject, takeUntil } from 'rxjs';
+import { fromEvent, Observable, Subject, takeUntil } from 'rxjs';
+import { NavBarModel } from '../../models/shared.model';
+import { SharedDataService } from '../../services/shared.data.service';
 
 @Component({
   selector: 'nav-bar-example',
@@ -10,12 +12,15 @@ export class NavBarComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('navbar') navbarElementRef: ElementRef;
   @ViewChild('menubar') menubarElementRef: ElementRef;
 
-  // navbarClick: Subscription; // old way to unsubscribe
   private onDestroy$: Subject<boolean> = new Subject();
 
-  constructor() {}
+  navBarConfig$: Observable<NavBarModel[]>;
 
-  ngOnInit() {}
+  constructor(private sharedDataService: SharedDataService) {}
+
+  ngOnInit() {
+    this.navBarConfig$ = this.sharedDataService.getNavBarConfig();
+  }
 
   ngAfterViewInit(): void {
     // this.navbarClick = fromEvent(this.navbarElementRef.nativeElement, 'click').subscribe(
@@ -27,9 +32,11 @@ export class NavBarComponent implements OnInit, AfterViewInit, OnDestroy {
       });
   }
 
-  ngOnDestroy() {
-    // this.navbarClick.unsubscribe(); // this is old way without takeUntil
+  // ddToggle(i: number) {
+  //   this.result[i].menu = !this.result[i].menu;
+  // }
 
+  ngOnDestroy() {
     this.onDestroy$.next(true);
     this.onDestroy$.complete();
   }

@@ -80,3 +80,10 @@ export class Card {
     this.hide = !this.hide;
   }
 }
+
+export class NavBarModel {
+  linkText: string;
+  parentLink: string;
+  menu: boolean;
+  submenu: { childtext: string; link: string }[];
+}

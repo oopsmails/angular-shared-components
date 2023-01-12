@@ -10,7 +10,10 @@
 
   <nav class="navbar" #navbar>
     <ul>
-      <li>
+      <li *ngFor="let item of navBarConfig$ | async; let i = index">
+        <a routerLink="{{ item.parentLink }}">{{ item.linkText }}</a>
+      </li>
+      <!-- <li>
         <a routerLink="/home"
           >Home
           <span class="badge-num"> 0 </span>
@@ -22,7 +25,6 @@
       <li>
         <a>
           GOTO
-          <!-- <fa-icon [icon]="faAngleDown"></fa-icon> -->
           <span class="nav-bar-arrow-down"><i class="arrow down"></i></span>
         </a>
         <ul>
@@ -31,7 +33,7 @@
           <li><a routerLink="sandbox/us-state">US States</a></li>
           <li><a routerLink="sandbox/search-state">Search US States</a></li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </div>

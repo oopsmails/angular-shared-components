@@ -15,6 +15,9 @@ import { BackAngleComponent } from './components/back-angle/back.angle.component
 import { ElementChangingDirective } from './directives/element-changing.directive';
 import { MouseoverColorDirective } from './directives/mouseover-color.directive';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -26,7 +29,14 @@ import { BrowserModule } from '@angular/platform-browser';
     ElementChangingDirective,
     MouseoverColorDirective,
   ],
-  imports: [CommonModule, BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forChild(routes),
+  ],
   exports: [
     HighlighterPipe,
     NotFoundComponent,
