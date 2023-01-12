@@ -5,7 +5,7 @@ import { Card } from '../models/shared.model';
 @Injectable({
   providedIn: 'root',
 })
-export class HomeDataService implements OnDestroy {
+export class CardDataService implements OnDestroy {
   public cards = [
     new Card('What did the cheese say when it looked in the mirror?', 'Hello-me (Halloumi)'),
     new Card(

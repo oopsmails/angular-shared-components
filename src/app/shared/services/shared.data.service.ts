@@ -102,7 +102,11 @@ export class SharedDataService implements OnDestroy {
   }
 
   getNavBarConfig(): Observable<NavBarModel[]> {
-    return this.httpClient.get('assets/config/nav-bar-config.json') as Observable<NavBarModel[]>;
+    return (
+      this.httpClient.get('assets/config/nav-bar-config.json') as Observable<NavBarModel[]>
+    ).pipe(
+      tap((items) => console.log('getNavBarConfig result.size: ', (items && items.length) || '0'))
+    );
   }
 
   ngOnDestroy(): void {
