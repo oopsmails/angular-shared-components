@@ -1,0 +1,217 @@
+$logo-color: #333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.header-div {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background: var(--primary-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        font-weight: bolder;
+        font-size: 25px;
+        color: $logo-color;
+    }
+
+    .navbar {
+        ul {
+            list-style: none;
+
+            li {
+                position: relative;
+                float: left;
+
+                a {
+                    font-size: 20px;
+                    padding: 20px;
+                    color: $logo-color;
+                    display: block;
+                }
+
+                a:hover {
+                    background: #333;
+                    color: #ffffff;
+
+                    .arrow {
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    left: 0;
+                    width: 200px;
+                    background: #fff;
+                    display: none;
+
+                    li {
+                        width: 100%;
+                        border-top: 1px solid rgba(0, 0, 0, .1);
+
+                        a {
+                            font-size: 16px;
+                            padding: 10px;
+                            display: block;
+                        }
+
+                        ul {
+                            left: 200px;
+                            top: 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// focus-within working with one click first, then the menu stay
+// .header-div .navbar ul li:focus-within>ul,
+.header-div .navbar ul li:hover>ul {
+    display: initial;
+}
+
+#menu-bar {
+    border: 1px solid red;
+    display: none;
+}
+
+
+
+.nav-toggle-label {
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: $logo-color;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+
+
+.header-div label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-bar-arrow-down {
+    padding-left: 5px;
+}
+
+// Smaller screen
+@media(max-width: 830px) {
+    .header-div {
+        padding: 20px;
+    }
+
+    .header-div label {
+        display: initial;
+    }
+
+    .header-div .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    .header-div .navbar ul li {
+        width: 100%;
+    }
+
+    .header-div .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    .header-div .navbar ul li ul li {
+        background: #eee;
+    }
+
+    .header-div .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked~.navbar {
+        display: initial;
+    }
+}
+
+//------------------------ https://www.w3schools.com/howto/howto_css_arrows.asp --------------------
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    margin-bottom: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
