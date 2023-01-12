@@ -1,0 +1,10 @@
+[
+    {
+        "setting": "connectionString",
+        "value": "mydatabase-connection-string"
+    },
+    {
+        "setting": "defaultImage",
+        "value": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.pexels.com%2Fphotos%2F45201%2Fkitty-cat-kitten-pet-45201.jpeg&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fcat%2F&docid=hVpvvL-HxQGRYM&tbnid=_yQesjdgLHT7gM%3A&vet=10ahUKEwj7p4S-pd_WAhUB0YMKHTPOBhoQMwjZASgBMAE..i&w=2392&h=2500&bih=734&biw=1538&q=cat%20images&ved=0ahUKEwj7p4S-pd_WAhUB0YMKHTPOBhoQMwjZASgBMAE&iact=mrc&uact=8"
+    }
+]

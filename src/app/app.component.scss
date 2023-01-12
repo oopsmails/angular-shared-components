@@ -1,0 +1,5 @@
+.navbar-fix-place-holder {
+  position: relative;
+  height: var(--nav-height);
+  z-index: -1000;
+}

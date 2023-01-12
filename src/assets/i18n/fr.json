@@ -1,0 +1,7 @@
+{
+    "TEST_DESCRIPTION": "fr: test description in fr.json, {{ interpolateParams1 }} of {{ interpolateParams2 }}",
+    "HOME": {
+        "TITLE": "Bonjour Angular avec ngx-translate !",
+        "SELECT": "Changer la langue"
+    }
+}

@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "pinaceae",
+        "name": "subalpine fir",
+        "scientific_name": "abies lasiocarpa"
+    },
+    {
+        "id": 2,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "rosaceae",
+        "name": "sour cherry",
+        "scientific_name": "prunus cerasus"
+    },
+    {
+        "id": 3,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "rosaceae2",
+        "name": "asian pear",
+        "scientific_name": "pyrus pyrifolia"
+    },
+    {
+        "id": 4,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "rosaceae3",
+        "name": "asiab pear",
+        "scientific_name": "pyrus pyrifolia3"
+    },
+    {
+        "id": 5,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "hamamelidaceae",
+        "name": "chinese witch hazel",
+        "scientific_name": "hamamelis mollis"
+    },
+    {
+        "id": 6,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "sapindaceae",
+        "name": "silver maple",
+        "scientific_name": "acer saccharinum"
+    },
+    {
+        "id": 7,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "magnoliaceae",
+        "name": "cucumber tree",
+        "scientific_name": "magnolia acuminata"
+    },
+    {
+        "id": 8,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "ericaceae",
+        "name": "korean rhododendron",
+        "scientific_name": "rhododendron mucronulatum"
+    },
+    {
+        "id": 9,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "araceae",
+        "name": "water lettuce",
+        "scientific_name": "pistia"
+    },
+    {
+        "id": 10,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "fagaceae",
+        "name": "sessile oak",
+        "scientific_name": "quercus petraea"
+    },
+    {
+        "id": 11,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "moraceae",
+        "name": "common fig",
+        "scientific_name": "ficus carica"
+    },
+    {
+        "id": 12,
+        "created_at": "2022-09-29T13:52:51.245Z",
+        "family": "moraceae2",
+        "name": "common fig2",
+        "scientific_name": "ficus carica2"
+    }
+]
