@@ -1,4 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { AngularOopsSharedComponentsService } from 'angular-oops-shared-components';
 import { Observable, Subject, takeUntil, tap } from 'rxjs';
 import { UsCity, UsState } from '../shared/models';
 import { StateService } from '../shared/services/state.service';
@@ -21,9 +22,13 @@ export class HelloComponent implements OnInit, OnDestroy {
 
   usStates: UsState[] = []; // Here, only for demo how to unscribe!
 
-  constructor(private stateService: StateService) {}
+  constructor(
+    private stateService: StateService,
+    private angularOopsSharedComponentsService: AngularOopsSharedComponentsService
+  ) {}
 
   ngOnInit(): void {
+    this.angularOopsSharedComponentsService.doSomething();
     this.items$ = this.stateService.getUsStateCity();
 
     this.stateService
