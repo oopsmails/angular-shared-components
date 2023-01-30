@@ -42,7 +42,7 @@ this.angularOopsSharedComponentsService.doSomething();
 
 ### Note, service only in provider part of module.ts, i.e, do not need to put in declarations or exports part
 
-Otherwise, got "service not component, module .... errir"
+Otherwise, got "service not component, module .... error"
 
 ### error TS2707: Generic type 'ɵɵComponentDeclaration' requires between 7 and 8 type arguments.
 
