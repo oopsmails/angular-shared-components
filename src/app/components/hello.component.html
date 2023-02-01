@@ -2,6 +2,11 @@
 <hr />
 <h1>Hello {{ name }}!</h1>
 <hr />
+<div
+  *ngIf="toBeHighlighted"
+  [innerHtml]="toBeHighlighted | highlightHtml : highlightHtmlText"
+></div>
+<hr />
 <!-- <div *ngFor="let city of usCities$ | async">
   {{ city.id }} - {{ city.cityName }} - {{ city.inStateName }}
 </div> -->
@@ -28,7 +33,7 @@
   <tbody>
     <tr *ngFor="let item of items$ | async">
       <td>{{ item.id }}</td>
-      <td><div [innerHtml]="item.stateName"></div></td>
+      <td><div [innerHtml]="item.stateName | highlightHtml : 'al'"></div></td>
     </tr>
   </tbody>
 </table>

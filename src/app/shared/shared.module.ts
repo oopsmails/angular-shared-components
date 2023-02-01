@@ -10,6 +10,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ElementChangingDirective } from './directives/element-changing.directive';
 import { MouseoverColorDirective } from './directives/mouseover-color.directive';
+import { HighlightHtmlPipe } from './pipes/highlight.html.pipe';
 import { HighlighterPipe } from './pipes/highlighter.pipe';
 import { CarDataService } from './services/car.service';
 import { CardDataService } from './services/card.service';
@@ -22,6 +23,7 @@ import { WikipediaService } from './services/wikipedia.service';
 @NgModule({
   declarations: [
     HighlighterPipe,
+    HighlightHtmlPipe,
     NotFoundComponent,
     FooterComponent,
     NavBarComponent,
@@ -39,6 +41,7 @@ import { WikipediaService } from './services/wikipedia.service';
   ],
   exports: [
     HighlighterPipe,
+    HighlightHtmlPipe,
     NotFoundComponent,
     NavBarComponent,
     FooterComponent,

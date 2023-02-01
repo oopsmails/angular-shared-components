@@ -21,6 +21,10 @@ tr:hover {
     background-color: yellow;
 }
 
+::ng-deep.highlight {
+    background-color: yellow;
+}
+
 .searcTexthDiv {
     padding: 0px 0 10px 0;
 }

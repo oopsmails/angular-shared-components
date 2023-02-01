@@ -14,6 +14,9 @@ export class HelloComponent implements OnInit, OnDestroy {
   routerLinkInput = '';
   @Input() name: string = 'Shared Component';
 
+  toBeHighlighted = 'oops abc ops cde';
+  highlightHtmlText = 'ops';
+
   private onDestroy$: Subject<boolean> = new Subject();
 
   items$: Observable<UsState[]>;
